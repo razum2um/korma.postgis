@@ -1,4 +1,4 @@
-(defproject korma_postgis "0.0.1"
+(defproject korma.postgis "0.1.0"
   :description "some conviance for workting with korma and postgis databases"
   :java-source-path "src"
   :dependencies [[korma "0.4.0"]
