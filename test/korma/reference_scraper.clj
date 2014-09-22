@@ -5,7 +5,7 @@
 ; not really a test but the scraper for the postgis-reference-documentation
 ; to create the macros that act as function-aliases
 
-(def base-url "http://postgis.refractions.net/documentation/manual-1.5/")
+(def base-url "http://postgis.net/docs/manual-2.1/")
 (def url (java.net.URL. (str base-url "reference.html")) )
 
 (def page (html/html-resource url) )
@@ -74,7 +74,7 @@
 ;(def pgfns (to-pgfn (sect-by-title "Geometry_Outputs" sect1 ))) ;all 1 parameter
 ;(def pgfns (to-pgfn (sect-by-title "Spatial_Relationships_Measurements" sect1)))
 (def rel-meas-1-param (to-str #{:ST_Area :ST_Centroid :ST_HasArc :ST_Length :ST_Length3D}))
-(def misc-1-param (to-str #{:ST_XMax :ST_YMax :ST_ZMax :ST_XMin :ST_YMin :ST_ZMin  }))
+(def misc-1-param (to-str #{:ST_XMax :ST_YMax :ST_ZMax :ST_XMin :ST_YMin :ST_ZMin}))
 (def pgfns-misc (to-pgfn (sect-by-title "Miscellaneous_Functions" sect1)))
 ;(print-macros (filter-whitelist pgfns geom-rel-meas-1-param ) 1)
 ;(print-macros (filter-blacklist pgfns rel-meas-1-param ) 2)
