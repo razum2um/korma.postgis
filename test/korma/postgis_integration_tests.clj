@@ -9,10 +9,10 @@
   (:import [com.vividsolutions.jts.geom.Polygon])
   (:import [com.vividsolutions.jts.io.WKTWriter] ) )
 
-;tests that actually use a db
+; tests that actually use a db
 ; -> requires a running postgis-installation
 
-;TODO move connection-parameters into a separate file
+; TODO move connection-parameters into a separate file
 (defdb osm {:classname "org.postgresql.Driver"
                   :subprotocol "postgresql"
                   :subname "osm"
